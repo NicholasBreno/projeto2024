@@ -1,0 +1,176 @@
+:root {
+    --primary-gradient: linear-gradient(to right, #f06b6b, #f0966b);
+    --primary-color: #f06b6b;
+    --secondary-color: #f0f0f0;
+    --font-family: 'Roboto', sans-serif;
+    --font-size: 16px;
+    --button-hover-color: #e55b5b;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.hamburger-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.dashboard-container {
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.dashboard-container h2 {
+    color: #f06b6b;
+}
+
+.task-list {
+    margin-top: 20px;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pure-menu-item {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-actions button {
+    margin-left: 5px;
+}
+
+.pure-button-error {
+    background-color: #f44336;
+    color: white;
+}
+
+.pure-button-error:hover {
+    background-color: var(--button-hover-color);
+}
+
+.pure-button-secondary {
+    background-color: #f0966b;
+    color: white;
+}
+
+.pure-button-secondary:hover {
+    background-color: #e55b5b;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--primary-gradient);
+    color: white;
+    overflow-y: auto; /* Permite rolagem vertical */
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar.active {
+    width: 300px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar .profile-section {
+    padding: 20px;
+    text-align: center;
+    height: calc(100% - 60px); /* Ajuste para não ultrapassar a altura total */
+    overflow-y: auto; /* Permite rolagem dentro da seção do perfil */
+}
+
+.profile-container {
+    margin-top: 20px;
+}
+
+.profile-info p {
+    margin: 10px 0;
+}
+
+.profile-actions button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 10px;
+    }
+
+    .pure-menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-top: 10px;
+    }
+}

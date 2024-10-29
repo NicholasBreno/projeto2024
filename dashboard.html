@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Dashboard de Tarefas</h1>
+        <div class="header-buttons">
+            <button class="hamburger-icon" onclick="toggleSidebar()">&#9776;</button>
+            <button class="pure-button logout-button" onclick="logout()">Sair</button>
+        </div>
+    </header>
+
+    <section class="dashboard-container">
+        <h2>Bem-vindo, <span id="user-name">Usuário</span>!</h2>
+        <p>Gerencie suas tarefas abaixo:</p>
+
+        <div class="task-list">
+            <h3>Suas Tarefas</h3>
+            <ul class="pure-menu-list"></ul>
+        </div>
+
+        <input type="text" id="new-task" placeholder="Adicionar nova tarefa" />
+        <button class="pure-button pure-button-secondary add-task-button" onclick="addTask()">Adicionar Nova Tarefa</button>
+    </section>
+
+    <div id="profile-sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <section class="profile-section">
+            <h2>Perfil do Usuário</h2>
+            <div class="profile-container">
+                <div class="profile-info">
+                    <p><strong>Nome:</strong> <span id="user-name-sidebar"></span></p>
+                    <p><strong>Email:</strong> joao.silva@email.com</p>
+                    <p><strong>Data de Inscrição:</strong> 10/10/2023</p>
+                </div>
+                <div class="profile-actions">
+                    <button class="pure-button pure-button-primary">Editar Perfil</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+
+
+</body>
+</html>

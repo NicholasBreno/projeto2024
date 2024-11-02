@@ -3,45 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Dashboard de Tarefas</title>
+    <title>Login - Tarefas em Dia</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
-<body>
+<body class="body-style">
 
     <div class="login-wrapper">
         <div class="login-container">
-            <h2>Bem-vindo ao Dashboard de Tarefas!</h2>
-            <p>Faça o login para acessar suas tarefas.</p>
+            <img src="imagens/logo_td.jpg" alt="logo" class="login-logo">
+            <h2>Vamos organizar suas tarefas diárias!</h2>
+            <p>Faça o login para continuar sua experiência.</p>
 
-            <form class="pure-form pure-form-stacked" onsubmit="handleLogin(); return false;">
+            <form class="pure-form pure-form-stacked login-form" onsubmit="handleLogin(); return false;">
                 <fieldset>
-                    <label for="username">Nome de Usuário</label>
-                    <input type="text" id="username" placeholder="Digite seu nome" required>
-
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Digite seu email" required>
 
                     <label for="password">Senha</label>
                     <input type="password" id="password" placeholder="Digite sua senha" required>
 
-                    <label for="remember" class="pure-checkbox">
+                    <label for="remember" class="pure-checkbox remember-checkbox">
                         <input type="checkbox" id="remember"> Lembrar de mim
                     </label>
 
-                    <button type="submit" class="pure-button pure-button-primary">Entrar</button>
+                    <button type="submit" class="login-button">Entrar</button>
                 </fieldset>
             </form>
 
             <div class="extra-actions">
-                <a href="#">Esqueceu sua senha?</a>
+                <a href="#">Redefinir senha</a>
                 <a href="#">Criar nova conta</a>
             </div>
         </div>
     </div>
 
     <script src="login.js"></script>
-
 </body>
 </html>

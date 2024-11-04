@@ -71,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks();
 });
 
+const newTaskInput = document.getElementById('new-task');
+newTaskInput.addEventListener('keypress', function(event){
+    if (event.key === 'Enter') {
+        addTask();
+        event.preventDefault();
+    }
+});
+
 //Função do botão de sair
 function logout() {
     localStorage.removeItem('userName');

@@ -1,6 +1,5 @@
 /*----*/
-/*Estilização do dashboard*/
-
+/* Estilização do dashboard */
 .body-style {
     background: radial-gradient(circle, gray 30%, black 100%);
     margin: 0;
@@ -50,7 +49,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-gradient);
-    color: black ;
+    color: black;
 }
 
 .dashboard-header h1 {
@@ -64,14 +63,6 @@
     align-items: center;
 }
 
-.logout-button {
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
 .dashboard-container {
     text-align: center;
     padding: 20px;
@@ -80,9 +71,8 @@
     background-color: #8c8c8c;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    color:white;
+    color: white;
 }
-
 
 .task-input-container {
     display: flex;
@@ -91,22 +81,20 @@
     justify-content: center;
 }
 
-
 #new-task {
-    width: 70%;
-    height: 25px;
+    width: 75%;
+    height: 35px;
     padding: 4px 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
 }
 
-
 .add-task-button {
     background-color: #28a745;
     color: white;
-    height: 38px;
-    padding: 4px 10px;
+    height: 40px;
+    padding: 8px 16px;
     border: none;
     border-radius: 5px;
     font-size: 14px;
@@ -118,46 +106,73 @@
     background-color: #218838;
 }
 
+.task-list {
+    margin-top: 15px;
+    width: 90%;
+}
 
-.task-item {
+.task-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.task-list-items li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 6px;
+    margin: 4px 0;
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
 }
 
-
-.edit-button {
-    background-color: #6c757d;
+.complete-button {
+    background-color: #28a745;
     color: white;
+    padding: 10px 16px;
     border: none;
-    padding: 4px 8px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 5px;
-    font-size: 13px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.complete-button:hover {
+    background-color: #218838;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
 .edit-button:hover {
-    background-color: #5a6268;
+    background-color: #0056b3;
 }
 
 .delete-button {
-    background-color: #dc3545;
+    background-color: red;
     color: white;
+    padding: 10px 16px;
     border: none;
-    padding: 4px 8px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
 .delete-button:hover {
-    background-color: #c82333;
+    background-color: darkred;
 }
 
 .sidebar {
@@ -200,6 +215,8 @@
 .edit-profile-button:hover {
     background-color: var(--button-hover-color);
 }
+
+
 
 @media (max-width: 768px) {
     .dashboard-container {

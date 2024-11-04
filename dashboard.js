@@ -52,11 +52,11 @@ function renderTasks() {
         li.innerHTML = `
             <span${task.completed ? ' style="text-decoration: line-through;"' : ''}>${task.name}</span>
             <div class="task-actions">
-                <button class="pure-button pure-button-primary" onclick="toggleTask(${index})">
+                <button class="complete-button" onclick="toggleTask(${index})">
                     ${task.completed ? 'Reverter' : 'Concluir'}
                 </button>
-                <button class="pure-button" onclick="editTask(${index})">Editar</button>
-                <button class="pure-button pure-button-error" onclick="removeTask(${index})">Remover</button>
+                <button class="edit-button" onclick="editTask(${index})">Editar</button>
+                <button class="delete-button" onclick="removeTask(${index})">Remover</button>
             </div>
         `;
         taskList.appendChild(li);

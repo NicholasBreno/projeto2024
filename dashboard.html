@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Gerenciamento de Tarefas</title>
+    <title>Dashboard - Tarefas em Dia</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
     <link rel="stylesheet" href="dashboard.css">
 </head>
 
-<body>
+<body class="body-style">
 
-    <header>
+    <nav class="main-nav">
+        <img src="imagens/logo_td.jpg" alt="Logo" class="logo" />
+        <span class="user-greeting">Olá, <span id="user-name">Usuário</span></span>
+        <a href="#logout" class="logout-button">Sair</a>
+    </nav>
+
+    <header class="dashboard-header">
         <h1>Dashboard de Tarefas</h1>
         <div class="header-buttons">
             <button class="hamburger-icon" onclick="toggleSidebar()">&#9776;</button>
-            <button class="pure-button logout-button" onclick="logout()">Sair</button>
         </div>
     </header>
 
@@ -22,14 +27,20 @@
         <h2>Bem-vindo, <span id="user-name">Usuário</span>!</h2>
         <p>Gerencie suas tarefas abaixo:</p>
 
-        <div class="task-list">
-            <h3>Suas Tarefas</h3>
-            <ul class="pure-menu-list"></ul>
+        <div class="task-input-container">
+
+            <input type="text" id="new-task" placeholder="Digite uma nova tarefa" />
+            <button class="add-task-button" onclick="addTask()">Adicionar</button>
         </div>
 
-        <input type="text" id="new-task" placeholder="Adicionar nova tarefa" />
-        <button class="pure-button pure-button-secondary add-task-button" onclick="addTask()">Adicionar Nova Tarefa</button>
+        <div class="task-list">
+            <h3>Suas tarefas:</h3>
+            <ul id="task-list" class="pure-menu-list">
+                <!--As tarefas serão inseridas aqui...-->
+            </ul>
+        </div>
     </section>
+
 
     <div id="profile-sidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
@@ -49,7 +60,6 @@
     </div>
 
     <script src="dashboard.js"></script>
-
 
 </body>
 </html>

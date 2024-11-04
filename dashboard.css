@@ -1,176 +1,208 @@
-:root {
-    --primary-gradient: linear-gradient(to right, #f06b6b, #f0966b);
-    --primary-color: #f06b6b;
-    --secondary-color: #f0f0f0;
-    --font-family: 'Roboto', sans-serif;
-    --font-size: 16px;
-    --button-hover-color: #e55b5b;
-}
+/*----*/
+/*Estilização do dashboard*/
 
-body {
-    font-family: var(--font-family);
-    background-color: var(--secondary-color);
+.body-style {
+    background: radial-gradient(circle, gray 30%, black 100%);
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    background: var(--primary-gradient);
+.main-nav {
+    background-color: #333;
     color: white;
     padding: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     position: relative;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
+.logo {
+    height: 50px;
 }
 
-.hamburger-icon {
+.user-greeting {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    background: none;
-    border: none;
+    right: 80px;
     color: white;
-    cursor: pointer;
+    font-size: 16px;
 }
 
 .logout-button {
     position: absolute;
-    top: 10px;
     right: 10px;
-    background-color: #f44336;
     color: white;
+    text-decoration: none;
+    background-color: red;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .logout-button:hover {
-    background-color: var(--button-hover-color);
+    background-color: darkred;
 }
 
-.dashboard-container {
-    padding: 20px;
-    margin: auto;
-    max-width: 800px;
-    width: 100%;
+.dashboard-header {
     text-align: center;
-}
-
-.dashboard-container h2 {
-    color: #f06b6b;
-}
-
-.task-list {
-    margin-top: 20px;
-}
-
-.task-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.pure-menu-item {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-gradient);
+    color: black ;
 }
 
-.task-actions button {
-    margin-left: 5px;
+.dashboard-header h1 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
 }
 
-.pure-button-error {
-    background-color: #f44336;
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button {
+    background-color: red;
     color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
-.pure-button-error:hover {
-    background-color: var(--button-hover-color);
+.dashboard-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #8c8c8c;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color:white;
 }
 
-.pure-button-secondary {
-    background-color: #f0966b;
+
+.task-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+#new-task {
+    width: 70%;
+    height: 25px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+.add-task-button {
+    background-color: #28a745;
     color: white;
+    height: 38px;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.pure-button-secondary:hover {
-    background-color: #e55b5b;
+.add-task-button:hover {
+    background-color: #218838;
+}
+
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.edit-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.edit-button:hover {
+    background-color: #5a6268;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
 }
 
 .sidebar {
-    height: 100%;
-    width: 0;
+    width: 250px;
     position: fixed;
     top: 0;
-    right: 0;
-    background: var(--primary-gradient);
+    left: 0;
+    height: 100%;
+    background-color: #333;
     color: white;
-    overflow-y: auto; /* Permite rolagem vertical */
-    transition: 0.5s;
     padding-top: 60px;
-}
-
-.sidebar.active {
-    width: 300px;
+    display: none;
+    transition: 0.5s;
 }
 
 .sidebar .closebtn {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
 }
 
-.sidebar .profile-section {
+.profile-section {
     padding: 20px;
-    text-align: center;
-    height: calc(100% - 60px); /* Ajuste para não ultrapassar a altura total */
-    overflow-y: auto; /* Permite rolagem dentro da seção do perfil */
-}
-
-.profile-container {
-    margin-top: 20px;
 }
 
 .profile-info p {
     margin: 10px 0;
+    font-size: 14px;
 }
 
-.profile-actions button {
-    margin-top: 20px;
-    width: 100%;
+.edit-profile-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-/* Responsividade */
+.edit-profile-button:hover {
+    background-color: var(--button-hover-color);
+}
+
 @media (max-width: 768px) {
     .dashboard-container {
-        padding: 10px;
-    }
-
-    .pure-menu-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .task-actions {
-        margin-top: 10px;
+        padding: 15px;
     }
 }

@@ -1,26 +1,10 @@
+
+//Tratando as funcionalidades das tarefas
 function toggleSidebar() {
     const sidebar = document.getElementById("profile-sidebar");
     sidebar.classList.toggle("active");
 }
 
-function renderTasks() {
-    const taskList = document.querySelector('.task-list ul');
-    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    taskList.innerHTML = '';
-    tasks.forEach((task, index) => {
-        const li = document.createElement('li');
-        li.className = 'pure-menu-item';
-        li.innerHTML = `
-            <span${task.completed ? ' style="text-decoration: line-through;"' : ''}>${task.name}</span>
-            <div class="task-actions">
-                <button class="pure-button pure-button-primary" onclick="toggleTask(${index})">${task.completed ? 'Reverter' : 'Concluir'}</button>
-                <button class="pure-button" onclick="editTask(${index})">Editar</button>
-                <button class="pure-button pure-button-error" onclick="removeTask(${index})">Remover</button>
-            </div>
-        `;
-        taskList.appendChild(li);
-    });
-}
 
 function addTask() {
     const newTaskInput = document.getElementById('new-task');
@@ -57,7 +41,29 @@ function removeTask(index) {
     renderTasks();
 }
 
-// Exibir nome do usuário
+function renderTasks() {
+    const taskList = document.getElementById('task-list');
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    taskList.innerHTML = '';
+
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.className = 'pure-menu-item';
+        li.innerHTML = `
+            <span${task.completed ? ' style="text-decoration: line-through;"' : ''}>${task.name}</span>
+            <div class="task-actions">
+                <button class="pure-button pure-button-primary" onclick="toggleTask(${index})">
+                    ${task.completed ? 'Reverter' : 'Concluir'}
+                </button>
+                <button class="pure-button" onclick="editTask(${index})">Editar</button>
+                <button class="pure-button pure-button-error" onclick="removeTask(${index})">Remover</button>
+            </div>
+        `;
+        taskList.appendChild(li);
+    });
+}
+
+//Exibindo o nome do usuário
 document.addEventListener('DOMContentLoaded', () => {
     const userName = localStorage.getItem('userName') || 'Usuário';
     document.getElementById('user-name').innerText = userName;
@@ -65,7 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks();
 });
 
+//Função do botão de sair
 function logout() {
     localStorage.removeItem('userName');
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
 }

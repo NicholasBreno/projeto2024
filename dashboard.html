@@ -30,11 +30,12 @@
 
         <div class="task-input-container">
             <input type="text" id="new-task" placeholder="Digite uma nova tarefa" />
+            <textarea id="task-desc" placeholder="Descrição da tarefa"></textarea>
             <button class="add-task-button" onclick="addTask()">Adicionar</button>
         </div>
 
         <div class="task-list">
-            <h3>Suas tarefas:</h3>
+            <h3 id="task-title" style="display: none;">Suas tarefas:</h3>
             <ul id="task-list" class="pure-menu-list task-list-items">
                 <!-- As tarefas serão inseridas aqui... -->
             </ul>

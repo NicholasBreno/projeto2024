@@ -8,14 +8,50 @@ function toggleSidebar() {
 
 function addTask() {
     const newTaskInput = document.getElementById('new-task');
+    const taskDescInput = document.getElementById('task-desc'); // Novo campo de descrição
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    
     if (newTaskInput.value) {
-        tasks.push({ name: newTaskInput.value, completed: false });
+        tasks.push({
+            name: newTaskInput.value,
+            description: taskDescInput.value || '', // Adiciona descrição vazia se não preenchido
+            completed: false
+        });
         localStorage.setItem('tasks', JSON.stringify(tasks));
         newTaskInput.value = '';
+        taskDescInput.value = ''; // Limpa o campo de descrição
         renderTasks();
     }
 }
+
+function renderTasks() {
+    const taskList = document.getElementById('task-list');
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    const taskTitle = document.getElementById('task-title'); // Referência ao título
+    
+    // Condicional para mostrar ou ocultar o título
+    taskTitle.style.display = tasks.length ? 'block' : 'none';
+    
+    taskList.innerHTML = '';
+    
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.className = 'pure-menu-item';
+        li.innerHTML = `
+            <span${task.completed ? ' style="text-decoration: line-through;"' : ''}>${task.name}</span>
+            <p>${task.description}</p> <!-- Exibe a descrição da tarefa -->
+            <div class="task-actions">
+                <button class="complete-button" onclick="toggleTask(${index})">
+                    ${task.completed ? 'Reverter' : 'Concluir'}
+                </button>
+                <button class="edit-button" onclick="editTask(${index})">Editar</button>
+                <button class="delete-button" onclick="removeTask(${index})">Remover</button>
+            </div>
+        `;
+        taskList.appendChild(li);
+    });
+}
+
 
 function toggleTask(index) {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];

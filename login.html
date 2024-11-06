@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tarefas em Dia</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body class="body-style">
+
+    <div class="login-wrapper">
+        <div class="login-container">
+            <img src="imagens/logo_td.jpg" alt="logo" class="login-logo">
+            <h2>Vamos organizar suas tarefas diárias!</h2>
+            <p>Faça o login para continuar sua experiência.</p>
+
+            <form class="pure-form pure-form-stacked login-form" onsubmit="handleLogin(); return false;">
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+
+                    <label for="remember" class="pure-checkbox remember-checkbox">
+                        <input type="checkbox" id="remember"> Lembrar de mim
+                    </label>
+
+                    <button type="submit" class="login-button">Entrar</button>
+                </fieldset>
+            </form>
+
+            <div class="extra-actions"> 
+                <a href="cadastro.html">Criar nova conta</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

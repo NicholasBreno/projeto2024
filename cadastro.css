@@ -13,7 +13,7 @@
 }
 
 .register-container {
-    background-color: #8c8c8c;
+    background-color: #f5f5f5;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -30,12 +30,12 @@
 }
 
 .register-container h2 {
-    color: white;
+    color: black;
     margin-bottom: 10px;
 }
 
 .register-container p {
-    color: white;
+    color: black;
     font-size: 14px;
 }
 

@@ -10,11 +10,17 @@
 
 <body class="body-style">
 
-    <!-- Barra Mãe / Navegação Principal -->
     <nav class="main-nav">
-        <img src="imagens/logo_td.jpg" alt="Logo" class="logo" />
-        <span class="user-greeting">Olá, <span id="user-name">Usuário</span></span>
-        <a href="#logout" class="logout-button" onclick="logout()">Sair</a>
+
+        <div class="logo-container">
+            <img src="imagens/logo_td.jpg" alt="Logo" class="logo" />
+        </div>
+    
+        <div class="right-side">
+            <span class="user-greeting">Olá, <span id="user-name">João Silva</span></span>
+            <a href="editarPerfil.html" class="update-button">Editar Perfil</a>
+            <a href="#logout" class="logout-button" onclick="logout()">Sair</a>
+        </div>
     </nav>
 
     <header class="dashboard-header">

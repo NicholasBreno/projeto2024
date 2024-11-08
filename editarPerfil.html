@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Tarefas em Dia</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="editarPerfil.css">
+</head>
+<body>
+
+    <div class="register-wrapper">
+        <div class="register-container">
+            <img src="imagens/logo_td.jpg" alt="logo" class="register-logo">
+            <h2>Edição de Perfil - Tarefas em Dia</h2>
+            <p>Altere suas informações abaixo.</p>
+
+            <form class="pure-form pure-form-stacked" onsubmit="handleUpdateProfile(); return false;">
+                <fieldset>
+    
+                    <label for="full-name">Nome completo:</label>
+                    <input type="text" id="full-name" placeholder="Digite o seu nome completo" value="João Silva" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Digite seu email" value="joao.silva@email.com" required>
+    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" value="senha123" required>
+    
+                    <label for="birthdate">Data de nascimento:</label>
+                    <input type="date" id="birthdate" value="2000-01-01">
+    
+                    <button type="submit" class="pure-button pure-button-primary">Atualizar</button>
+                    
+                </fieldset>
+                </form>
+
+                <div class="extra-actions">
+                    <a href="dashboard.html">Voltar ao painel</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="editar-perfil.js"></script>
+    
+</body>
+</html>

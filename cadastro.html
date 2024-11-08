@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,33 +16,34 @@
             <h2>Cadastro - Tarefas em Dia</h2>
             <p>Crie sua conta para começarmos a experiência!</p>
 
-            <form class="pure-form pure-form-stacked" onsubmit="handleRegister(); return false;"></form>
-            <fieldset>
+            <form class="pure-form pure-form-stacked" onsubmit="handleRegister(event); return false;">
+                <fieldset>
 
-                <label for="full-name">Nome completo:</label>
-                <input type="text" id="full-name" placeholder="Digite o seu nome completo." required>
+                    <label for="full-name">Nome completo:</label>
+                    <input type="text" id="full-name" placeholder="Digite o seu nome completo." required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Digite seu email." required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Digite seu email." required>
 
-                <label for="password">Senha:</label>
-                <input type="password" id="password" placeholder="Escolha uma senha." required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" placeholder="Escolha uma senha." required>
 
-                <label for="birthdate">Data de nascimento:</label>
-                <input type="date" id="birthdate" placeholder="Digite sua data de nascimento">
+                    <label for="birthdate">Data de nascimento:</label>
+                    <input type="date" id="birthdate" placeholder="Digite sua data de nascimento" required>
 
+                    <button type="submit" class="pure-button pure-button-primary">Cadastrar</button>
 
-                <button type="submit" class="pure-button pure-button-primary">Cadastrar</button>
-                
-            </fieldset>
-        </form>
+                </fieldset>
+            </form>
 
-        <div class="extra-actions">
-            <a href="login.html">Já possui uma conta? Faça login!</a>
-        </div>
+            <div class="extra-actions">
+                <a href="login.html">Já possui uma conta? Faça login!</a>
+            </div>
         </div>
     </div>
-    
-        <script src="cadastro.js"></script>
+
+    <p id="feedback"></p> <!-- Feedback da operação de cadastro -->
+
+    <script src="cadastro.js"></script>
 </body>
 </html>

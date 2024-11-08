@@ -48,6 +48,30 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks();
 });
 
+// Função para realizar o login e verificar os dados cadastrados
+function handleLogin() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    if (!storedUser) {
+        alert('Nenhum usuário encontrado!');
+        return;
+    }
+
+    // Verifica se o email e senha estão corretos
+    if (storedUser.email === email && storedUser.password === password) {
+        alert('Login realizado com sucesso!');
+        window.location.href = 'dashboard.html';  // Redireciona para a página principal
+    } else {
+        alert('Email ou senha incorretos.');
+    }
+}
+
+
+
+
 //Retirar a simulação e inserir o fetch após conclusão do back end do login:
     // Envia a requisição para o backend
 /*    fetch('https://api.seusite.com/login', {  // Substitua pelo URL da sua API

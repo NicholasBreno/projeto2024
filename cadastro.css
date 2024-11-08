@@ -1,8 +1,6 @@
 /*----*/
 /*Estilização para o cadastro*/
 
-
-
 .register-wrapper {
     display: flex;
     justify-content: center;
@@ -91,4 +89,17 @@
 
 .extra-actions a:hover {
     color: #cccccc;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
 }

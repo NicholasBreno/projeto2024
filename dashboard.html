@@ -11,13 +11,12 @@
 <body class="body-style">
 
     <nav class="main-nav">
-
         <div class="logo-container">
             <img src="imagens/logo_td.jpg" alt="Logo" class="logo" />
         </div>
     
         <div class="right-side">
-            <span class="user-greeting">Olá, <span id="user-name">João Silva</span></span>
+            <span class="user-greeting">Olá, <span id="user-name-sidebar"></span></span>
             <a href="editarPerfil.html" class="update-button">Editar Perfil</a>
             <a href="#logout" class="logout-button" onclick="logout()">Sair</a>
         </div>
@@ -31,7 +30,7 @@
     </header>
 
     <section class="dashboard-container">
-        <h2>Bem-vindo, <span id="user-name">Usuário</span>!</h2>
+        <h2>Bem-vindo, <span id="user-name-dashboard">Usuário</span>!</h2>
         <p>Gerencie suas tarefas abaixo:</p>
 
         <div class="task-input-container">
@@ -54,12 +53,15 @@
             <h2>Perfil do Usuário</h2>
             
             <!-- Informações do perfil -->
-            <div id="profile-info" class="profile-info">
-                <p><strong>Nome:</strong> <span id="user-name-sidebar"></span></p>
-                <p><strong>Email:</strong> <span id="user-email-sidebar"></span></p>
-                <p><strong>Data de Inscrição:</strong> <span id="user-signup-date"></span></p>
-                <button class="edit-profile-button" onclick="showEditForm()">Editar Perfil</button>
-            </div>
+<div id="profile-info" class="profile-info">
+    <p><strong>Nome:</strong> <span id="user-name"></span></p>
+    <p><strong>Email:</strong> <span id="user-email"></span></p>
+    <p><strong>Data de Inscrição:</strong> <span id="user-signup-date"></span></p>
+    <button class="edit-profile-button" onclick="showEditForm()">Editar Perfil</button>
+</div>
+
+
+
     
             <!-- Formulário de edição do perfil (inicialmente escondido) -->
             <form id="edit-profile-form" class="edit-profile-form" style="display: none;" onsubmit="saveProfile(event)">
@@ -72,9 +74,6 @@
                 <button type="submit" class="save-profile-button">Salvar</button>
                 <button type="button" class="cancel-profile-button" onclick="cancelEdit()">Cancelar</button>
             </form>
-        </section>
-    </div>
-    
         </section>
     </div>
 

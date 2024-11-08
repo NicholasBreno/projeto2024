@@ -46,16 +46,29 @@
         <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
         <section class="profile-section">
             <h2>Perfil do Usuário</h2>
-            <div class="profile-container">
-                <div class="profile-info">
-                    <p><strong>Nome:</strong> <span id="user-name-sidebar"></span></p>
-                    <p><strong>Email:</strong> joao.silva@email.com</p>
-                    <p><strong>Data de Inscrição:</strong> 10/10/2023</p>
-                </div>
-                <div class="profile-actions">
-                    <button class="pure-button pure-button-primary">Editar Perfil</button>
-                </div>
+            
+            <!-- Informações do perfil -->
+            <div id="profile-info" class="profile-info">
+                <p><strong>Nome:</strong> <span id="user-name-sidebar"></span></p>
+                <p><strong>Email:</strong> <span id="user-email-sidebar"></span></p>
+                <p><strong>Data de Inscrição:</strong> <span id="user-signup-date"></span></p>
+                <button class="edit-profile-button" onclick="showEditForm()">Editar Perfil</button>
             </div>
+    
+            <!-- Formulário de edição do perfil (inicialmente escondido) -->
+            <form id="edit-profile-form" class="edit-profile-form" style="display: none;" onsubmit="saveProfile(event)">
+                <label for="edit-name">Nome:</label>
+                <input type="text" id="edit-name" required>
+                
+                <label for="edit-email">Email:</label>
+                <input type="email" id="edit-email" required>
+                
+                <button type="submit" class="save-profile-button">Salvar</button>
+                <button type="button" class="cancel-profile-button" onclick="cancelEdit()">Cancelar</button>
+            </form>
+        </section>
+    </div>
+    
         </section>
     </div>
 

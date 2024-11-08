@@ -50,43 +50,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Retirar a simulação e inserir o fetch após conclusão do back end do login:
     // Envia a requisição para o backend
-//    fetch('https://api.seusite.com/login', {  // Substitua pelo URL da sua API
-//        method: 'POST',
-//        headers: {
-//            'Content-Type': 'application/json',
-//        },
-//        body: JSON.stringify({
-//            email: emailInput,
-//            password: passwordInput,
-//        }),
-//    })
-//    .then(response => response.json())
-//    .then(data => {
-//        if (data.success) {
-//            // Supondo que o backend retorne o nome do usuário e um token de autenticação
-//            localStorage.setItem('userName', data.user.name);  // Armazena o nome do usuário
+/*    fetch('https://api.seusite.com/login', {  // Substitua pelo URL da sua API
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: emailInput,
+            password: passwordInput,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Supondo que o backend retorne o nome do usuário e um token de autenticação
+            localStorage.setItem('userName', data.user.name);  // Armazena o nome do usuário
 
-//            if (rememberMe) {
-//                localStorage.setItem('userEmail', emailInput);
+            if (rememberMe) {
+                localStorage.setItem('userEmail', emailInput);
                 // ATENÇÃO: Não armazene senhas em texto simples em produção!
-//                localStorage.setItem('userPassword', passwordInput);
-//            } else {
-//                localStorage.removeItem('userEmail');
-//                localStorage.removeItem('userPassword');
-//            }
-//
-//            // Se o login for bem-sucedido, armazena o token JWT e redireciona para o dashboard
-//            localStorage.setItem('authToken', data.token);
+                localStorage.setItem('userPassword', passwordInput);
+            } else {
+                localStorage.removeItem('userEmail');
+                localStorage.removeItem('userPassword');
+            }
 
-//            // Redireciona para o dashboard
-//            window.location.href = 'dashboard.html';
-//       } else {
-//            // Se a resposta for erro
-//            alert('E-mail ou senha incorretos. Tente novamente.');
-//        }
-//    })
-//    .catch(error => {
-//        console.error('Erro no login:', error);
-//        alert('Erro ao tentar fazer login. Tente novamente mais tarde.');
-//    });
-//}
+            // Se o login for bem-sucedido, armazena o token JWT e redireciona para o dashboard
+            localStorage.setItem('authToken', data.token);
+
+            // Redireciona para o dashboard
+            window.location.href = 'dashboard.html';
+       } else {
+            // Se a resposta for erro
+            alert('E-mail ou senha incorretos. Tente novamente.');
+        }
+    })
+    .catch(error => {
+        console.error('Erro no login:', error);
+        alert('Erro ao tentar fazer login. Tente novamente mais tarde.');
+    });
+} */
